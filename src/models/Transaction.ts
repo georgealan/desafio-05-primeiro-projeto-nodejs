@@ -1,4 +1,5 @@
 import { uuid } from 'uuidv4';
+import TypeEnum from './TypeEnum';
 
 class Transaction {
   id: string;
@@ -7,7 +8,7 @@ class Transaction {
 
   value: number;
 
-  type: 'income' | 'outcome';
+  type: TypeEnum.INCOME | TypeEnum.OUTCOME;
 
   constructor({ title, value, type }: Omit<Transaction, 'id'>) {
     this.id = uuid();

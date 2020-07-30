@@ -1,4 +1,5 @@
 import Transaction from '../models/Transaction';
+import TypeEnum from '../models/TypeEnum';
 
 interface Balance {
   income: number;
@@ -8,7 +9,7 @@ interface Balance {
 interface CreateTransactionDTO {
   title: string;
   value: number;
-  type: 'income' | 'outcome';
+  type: TypeEnum.INCOME | TypeEnum.OUTCOME;
 }
 class TransactionsRepository {
   private transactions: Transaction[];
