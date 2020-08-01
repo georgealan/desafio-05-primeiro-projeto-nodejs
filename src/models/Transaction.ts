@@ -8,7 +8,7 @@ class Transaction {
 
   value: number;
 
-  type: TypeEnum.INCOME | TypeEnum.OUTCOME;
+  type: TypeEnum;
 
   constructor({ title, value, type }: Omit<Transaction, 'id'>) {
     this.id = uuid();
